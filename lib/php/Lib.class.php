@@ -13,5 +13,16 @@ class php_Lib {
 		$h->h = $arr;
 		return $h;
 	}
+	static function mail($to, $subject, $message, $additionalHeaders = null, $additionalParameters = null) {
+		if(null !== $additionalParameters) {
+			return mail($to, $subject, $message, $additionalHeaders, $additionalParameters);
+		} else {
+			if(null !== $additionalHeaders) {
+				return mail($to, $subject, $message, $additionalHeaders);
+			} else {
+				return mail($to, $subject, $message);
+			}
+		}
+	}
 	function __toString() { return 'php.Lib'; }
 }
