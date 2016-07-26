@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+@import "common/base.css";
+
+/*-------------------------------------------------------------------------
+	All
+/*-----------------------------------------------------------------------*/
+#all {
+	width:860px;
+	margin:50px auto;
+}
+
+#video,
+#canvas {
+	width:400px;
+	height:300px;
+}
+
+#video {
+	float:left;
+}
+
+#canvas {
+	display:none;
+	background:#f00;
+}
+
+#note {
+	float:right;
+	overflow-y:scroll;
+	width:360px;
+	height:260px;
+	padding:18px;
+	border:1px solid #aaa;
+	background:#eee;
+}
